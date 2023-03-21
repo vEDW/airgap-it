@@ -25,7 +25,7 @@ fi
 source airgap-values
 
 #docker login registry
-echo "logging in remote registry - pleas enter password"
+echo "logging in remote registry - please enter password"
 docker login -u $REGISTRY_USER $DESTINATION_REGISTRY
 
 if [ $? -eq 0 ]

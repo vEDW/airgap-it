@@ -2,4 +2,4 @@
 
 export DESTINATION_REGISTRY="registry.yourdomain.io"
 export DESTINATION_PROJECT="projectname"
-export REGISTRY_USER="registry-username"
+export REGISTRY_USER='registry-username'  # use single quotes - important if using robot accounts
