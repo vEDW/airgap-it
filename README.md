@@ -8,9 +8,10 @@ push images to internal registry.
 modify yaml to point to internal registry for images.
 
 ## pre-requisites
-    - docker
-    - an image registry with a project to transfer images to
-    - a kubernetes application deployment yaml
+
+* docker
+* an image registry with a project to transfer images to
+* a kubernetes application deployment yaml
 
 
 ## configuration
@@ -47,4 +48,5 @@ export REGISTRY_USER="registry-username"
 ## notes
 
 script has been tested on MacOs and linux (ubuntu).
+
 registry tested : Harbor.

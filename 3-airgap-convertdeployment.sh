@@ -11,7 +11,7 @@ source airgap-values
 newfilename="converted-"$1
 cp $1 $newfilename
 
-images=$(cat $1 | grep image | awk '{print $2}')
+images=$(cat $1 | grep image: | awk '{print $2}')
 for image in ${images[@]}
 do
     echo "processing "$image

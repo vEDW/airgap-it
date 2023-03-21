@@ -36,7 +36,7 @@ else
   exit 1
 fi
 
-images=$(cat $1 | grep image | awk '{print $2}')
+images=$(cat $1 | grep image: | awk '{print $2}')
 for image in ${images[@]}
 do
     echo $image
