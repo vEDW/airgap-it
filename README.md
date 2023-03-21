@@ -20,30 +20,30 @@ cp airgap-values.example airgap-values
 
 edit airgap-values to fit your internal resources
 
-```
-export DESTINATION_REGISTRY="registry.yourdomain.io"
-export DESTINATION_PROJECT="projectname"
-export REGISTRY_USER="registry-username"
-```
+    ```
+    export DESTINATION_REGISTRY="registry.yourdomain.io"
+    export DESTINATION_PROJECT="projectname"
+    export REGISTRY_USER="registry-username"
+    ```
 
 ## useage
 
 * connect station to internet
 * pull images using the first script
 
-```
-./1-airgap-pull.sh path/to/yaml
-```
+    ```
+    ./1-airgap-pull.sh path/to/yaml
+    ```
 * push images to internal registry
-```
-./2-airgap-push.sh path/to/yaml
-```
+    ```
+    ./2-airgap-push.sh path/to/yaml
+    ```
 * modify yaml to point to internal images
 
-```
-./3-airgap-convertdeployment.sh path/to/yaml
-```
-
+    ```
+    ./3-airgap-convertdeployment.sh path/to/yaml
+    ```
+the last script produces a new yaml file named "converted-< orignal yaml filename >" that can now be used to deploy to kubernetes using the images in the internal registry.
 
 ## notes
 
