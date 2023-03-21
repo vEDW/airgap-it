@@ -8,7 +8,15 @@ fi
 
 source airgap-values
 
-newfilename="converted-"$1
+testpath=$(echo $1 |grep '/')
+
+if [ -z $testpath ]; then
+    newfilename="converted-"$1
+else
+    originalfilename=$(echo $1 |sed 's/.*\///')
+    newfilename="converted-"$originalfilename
+fi
+
 cp $1 $newfilename
 
 images=$(cat $1 | grep image: | awk '{print $2}')
