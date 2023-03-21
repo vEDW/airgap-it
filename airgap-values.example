@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export DESTINATION_REGISTRY="registry.yourdomain.io"
+export DESTINATION_PROJECT="projectname"
+export REGISTRY_USER="registry-username"
